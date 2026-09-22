@@ -204,15 +204,14 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Operational Carrier Disclaimer */}
-        <div style={{ backgroundColor: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.08)', borderRadius: 'var(--radius-md)', padding: '1rem 1.25rem', marginBottom: '1.5rem', fontSize: '0.8125rem', color: '#94A3B8', lineHeight: 1.5 }}>
-          <strong style={{ color: '#E2E8F0', display: 'block', marginBottom: '0.25rem' }}>Operational Carrier Disclaimer:</strong>
-          GetDigiFort is owned and operated by DMB Transit Inc. (USDOT #3849120, MC-892104). All freight quotations, equipment availability, and transit SLAs are subject to formal contract confirmation, carrier tariff rules (DMB-100), and standard bill of lading terms. Rates and transit estimates generated online are subject to final dispatch verification.
+        <div style={{ backgroundColor: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.08)', borderRadius: 'var(--radius-md)', padding: '0.85rem 1.25rem', marginBottom: '1.5rem', fontSize: '0.85rem', color: '#CBD5E1', textAlign: 'center' }}>
+          © 2026 GetDigiFort. Owned and Operated by DMB Transit Inc..
         </div>
 
         {/* Bottom Legal & Compliance Bar */}
         <div className={styles.bottomBar}>
           <div>
-            © 2026 GetDigiFort. Owned and Operated by DMB Transit Inc.. All Rights Reserved.
+            © 2026 GetDigiFort. Owned and Operated by DMB Transit Inc..
           </div>
           <div className={styles.bottomLinks}>
             <Link href="/privacy">Privacy Policy</Link>
