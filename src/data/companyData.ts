@@ -1,0 +1,46 @@
+export const COMPANY_INFO = {
+  name: 'Vanguardia Transport Group',
+  legalName: 'Vanguardia Logistics & Freight Systems Inc.',
+  tagline: 'Precision Freight. Enterprise Scale. Uncompromising Safety.',
+  shortDesc: 'Vanguardia is a premier North American asset-based carrier and supply chain solutions provider, operating over 450 Class-8 power units and specialized trailing assets.',
+  establishedYear: 1998,
+  dotNumber: 'USDOT 3849120',
+  mcNumber: 'MC-892104',
+  scacCode: 'VNDG',
+  headquarters: {
+    address: '4500 Vanguardia Logistics Way, Suite 800',
+    city: 'Chicago',
+    state: 'IL',
+    zip: '60666',
+    country: 'United States',
+  },
+  phone: {
+    dispatch: '+1 (800) 555-8264',
+    office: '+1 (312) 555-9000',
+    claims: '+1 (800) 555-9005',
+  },
+  email: {
+    quotes: 'quotes@vanguardiafreight.com',
+    support: 'dispatch@vanguardiafreight.com',
+    careers: 'careers@vanguardiafreight.com',
+  },
+  stats: [
+    { label: 'Annual Tonnage Delivered', value: '1.4M Tons', change: '+12% YOY' },
+    { label: 'On-Time Delivery SLA', value: '99.4%', change: 'Industry Benchmark' },
+    { label: 'Active Fleet Assets', value: '450+ Power Units', change: '100% Telematics' },
+    { label: 'Transcontinental Terminals', value: '38 Hubs', change: 'US & Canada' },
+    { label: 'DOT Safety Rating', value: 'Satisfactory (Top Tier)', change: 'Zero Unsafe Incidents' },
+  ],
+  certifications: [
+    'ISO 9001:2015 Certified',
+    'EPA SmartWay Transport Partner',
+    'TIA Certified Transportation Broker',
+    'C-TPAT Tier 2 Validated Carrier',
+    'GDP Compliant Cold Chain Carrier',
+  ],
+  socialLinks: {
+    linkedin: 'https://linkedin.com/company/vanguardia-transport',
+    twitter: 'https://twitter.com/vanguardiafreight',
+    youtube: 'https://youtube.com/vanguardiafreight',
+  },
+};

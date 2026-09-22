@@ -1,0 +1,89 @@
+.section {
+  padding: 5rem 0;
+  background-color: var(--color-primary-dark);
+  color: #FFFFFF;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.titleArea {
+  max-width: 540px;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-top: 0.5rem;
+  line-height: 1.25;
+}
+
+.desc {
+  font-size: 1.05rem;
+  color: #94A3B8;
+  margin-top: 0.85rem;
+  line-height: 1.6;
+}
+
+.badgeGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  flex: 1;
+}
+
+.badgeCard {
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.iconBox {
+  width: 44px;
+  height: 44px;
+  background-color: rgba(217, 119, 6, 0.15);
+  color: var(--color-accent);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.badgeTitle {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.badgeDesc {
+  font-size: 0.8125rem;
+  color: #94A3B8;
+  margin-top: 0.25rem;
+}
+
+@media (max-width: 1024px) {
+  .inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .badgeGrid {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+}
