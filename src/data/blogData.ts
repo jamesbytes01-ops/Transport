@@ -105,4 +105,82 @@ export const BLOG_ARTICLES: BlogArticle[] = [
       <p>State departments of transportation require detailed axle spacing calculations to ensure bridge deck integrity under loads exceeding 100,000 lbs.</p>
     `,
   },
+  {
+    id: 'blog-5',
+    slug: 'nearshoring-cross-border-us-mexico-logistics',
+    title: 'Nearshoring Velocity: Accelerating US-Mexico Cross-Border Freight Lanes',
+    excerpt: 'How C-TPAT Tier 2 validation and dedicated trans-loading hubs eliminate border crossing bottlenecks for automotive manufacturers.',
+    publishDate: 'June 02, 2026',
+    readTime: '8 min read',
+    category: 'Supply Chain Strategy',
+    author: {
+      name: 'Sarah Jenkins',
+      role: 'Director of Enterprise Freight Accounts',
+      avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200',
+    },
+    imageUrl: 'https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&q=80&w=1200',
+    tags: ['Nearshoring', 'Cross-Border', 'C-TPAT', 'Customs'],
+    contentHtml: `
+      <p class="lead">As industrial manufacturing shifts to Monterrey, Saltillo, and Queretaro, cross-border freight volume across Laredo and El Paso ports of entry has grown exponentially.</p>
+      <h2>C-TPAT Fast Lane Validation</h2>
+      <p>Vanguardia’s Tier-2 C-TPAT carrier status grants priority clearance at US Customs border checkpoints, reducing inspection dwell times from 4 hours down to under 20 minutes.</p>
+    `,
+  },
+  {
+    id: 'blog-6',
+    slug: 'port-drayage-bottlenecks-and-intermodal-solutions',
+    title: 'Navigating Port Drayage Choke Points with Dedicated Rail Ramping',
+    excerpt: 'Mitigating seaport container congestion through direct Class-1 intermodal rail transfers and off-peak port drayage.',
+    publishDate: 'May 14, 2026',
+    readTime: '7 min read',
+    category: 'Logistics Tech',
+    author: {
+      name: 'Michael Sterling',
+      role: 'Head of Telematics & Logistics Tech',
+      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200',
+    },
+    imageUrl: 'https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&q=80&w=1200',
+    tags: ['Port Drayage', 'Intermodal', 'Rail', 'Containers'],
+    contentHtml: `
+      <p class="lead">Container congestion at major seaports can freeze supply chain liquidity. Direct rail ramping transfers containers directly from shipside to Class-1 rail yards without highway drayage delays.</p>
+    `,
+  },
+  {
+    id: 'blog-7',
+    slug: 'autonomous-class-8-freight-safety-trials',
+    title: 'Evaluating Autonomous Class-8 Freight Corridors in Texas & the Southwest',
+    excerpt: 'Field metrics from 500,000 miles of hub-to-hub autonomous safety trials on interstate corridors.',
+    publishDate: 'April 22, 2026',
+    readTime: '10 min read',
+    category: 'Fleet Safety',
+    author: {
+      name: 'Elena Rostova',
+      role: 'Director of Fleet Operations & Sustainability',
+      avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200',
+    },
+    imageUrl: 'https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&q=80&w=1200',
+    tags: ['Autonomous', 'Fleet Safety', 'Southwest Corridor', 'Future Tech'],
+    contentHtml: `
+      <p class="lead">Autonomous freight technology is transitioning from lab testing to controlled interstate corridor operations. Vanguardia benchmarks safety records across 500,000 highway miles.</p>
+    `,
+  },
+  {
+    id: 'blog-8',
+    slug: 'esg-carbon-intensity-reporting-for-enterprise-shippers',
+    title: 'Scope 3 ESG Carbon Intensity Calculations for Enterprise Shippers',
+    excerpt: 'How standardized fuel burn telemetry and intermodal conversion data provide audit-proof ESG reporting for Fortune 500 sustainability teams.',
+    publishDate: 'March 30, 2026',
+    readTime: '8 min read',
+    category: 'Compliance',
+    author: {
+      name: 'Dr. Marcus Vance',
+      role: 'Chief Economist & VP of Supply Chain Intelligence',
+      avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200',
+    },
+    imageUrl: 'https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&q=80&w=1200',
+    tags: ['ESG', 'Sustainability', 'Scope 3', 'Carbon Metrics'],
+    contentHtml: `
+      <p class="lead">Enterprise supply chain managers face increasing scrutiny regarding Scope 3 carbon emissions. Vanguardia provides automated per-shipment CO2 reporting based on real-world fuel burn data.</p>
+    `,
+  },
 ];

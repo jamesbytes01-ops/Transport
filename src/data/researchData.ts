@@ -31,17 +31,6 @@ export const RESEARCH_REPORTS: ResearchReport[] = [
 # Executive Overview: Q3 2026 Freight Market Intelligence
 
 The North American surface transportation landscape in Q3 2026 reflects a transition from capacity fragmentation toward structured equilibrium. Enterprise shippers face a dual priority: securing guaranteed carrier capacity for critical corridors while optimizing overall cost-per-mile metrics amid shifting energy costs.
-
-## Key Corridor Trends: Midwest & Sunbelt Networks
-
-Our proprietary telemetry tracking across 38 transcontinental dispatch terminals indicates strong volume velocity in the Chicago-Dallas and Atlanta-Ohio logistics triangles.
-
-1. **Dry Van Linehaul Dynamics**: Contract rate renewal agreements across major retail and manufacturing sectors averaged a moderate 3.8% upward adjustment, driven primarily by driver compensation increases and insurance premiums.
-2. **Cold Chain Capacity Tightness**: The pharmaceutical and food produce segments experienced heightened demand. Reefer load-to-truck ratios surged in California's Central Valley and Florida agricultural hubs.
-
-## Intermodal Rail Optimization
-
-As diesel prices exhibit localized volatility, intermodal rail conversions continue to gain traction among Fortune 500 shippers moving freight over 750 miles. Transitioning long-haul FTL lanes to 53-foot intermodal containers yields average cost reductions of 19% alongside a 60% decrease in Scope 3 greenhouse gas emissions.
     `,
   },
   {
@@ -71,12 +60,6 @@ As diesel prices exhibit localized volatility, intermodal rail conversions conti
     ],
     contentMarkdown: `
 # Decarbonizing Heavy Transport: 2026 Operational Findings
-
-Achieving net-zero emissions in heavy-duty freight requires a pragmatic, multi-fuel strategy rather than a one-size-fits-all approach. Vanguardia's 18-month field trial evaluated three low-carbon powertrains across varying duty cycles.
-
-## RNG vs. Battery Electric: Duty Cycle Allocation
-
-Our findings demonstrate that Renewable Natural Gas (RNG) powered by dairy biomethane provides an immediate, scalable bridge for long-haul freight operations over 400 miles, while Battery Electric Vehicles (BEVs) excel in port drayage and urban cross-dock operations.
     `,
   },
   {
@@ -106,8 +89,90 @@ Our findings demonstrate that Renewable Natural Gas (RNG) powered by dairy biome
     ],
     contentMarkdown: `
 # GDP & FSMA Cold Chain Operational Manual
-
-In biopharmaceutical and high-value food logistics, temperature deviations can ruin millions of dollars of cargo. Vanguardia's GDP protocol establishes multi-layered safety mechanisms from dispatch to offloading.
+    `,
+  },
+  {
+    id: 'report-nearshoring-border-velocity-2026',
+    title: 'US-Mexico Nearshoring Velocity & Border Gate Dwell Benchmarks 2026',
+    slug: 'us-mexico-nearshoring-border-velocity-2026',
+    subtitle: 'Quantifying cross-border transit velocity across Laredo, El Paso, and Otay Mesa ports of entry for automotive tier-1 supply chains.',
+    publishDate: 'June 08, 2026',
+    readTime: '14 min read',
+    author: {
+      name: 'Sarah Jenkins',
+      role: 'Director of Enterprise Freight Accounts',
+      avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200',
+    },
+    category: 'Supply Chain Index',
+    summary: 'Analysis of cross-border freight velocity and customs dwell times. Vanguardia evaluates C-TPAT Fast Lanes, trans-loading hub efficiency, and trailer drop buffer capacity.',
+    downloadablePdf: '/docs/Vanguardia_Nearshoring_Report_2026.pdf',
+    keyFindings: [
+      'C-TPAT Tier 2 carriers experienced an average border inspection time of 18 minutes vs. 3.8 hours for unvalidated carriers.',
+      'Drop-and-hook trailer swaps at Laredo hubs reduced driver transit delays by 68%.',
+    ],
+    stats: [
+      { label: 'Border Clearance Time', value: '18 Mins', change: 'C-TPAT Tier 2' },
+      { label: 'Cross-Border Volume', value: '+18.4%', change: 'YoY Growth' },
+      { label: 'Laredo Drop Trailers', value: '140 Units', change: 'Dedicated Yard' },
+    ],
+    contentMarkdown: `
+# US-Mexico Nearshoring Velocity Report
+    `,
+  },
+  {
+    id: 'report-port-drayage-intermodal-conversion',
+    title: 'Seaport Drayage Bottlenecks & Intermodal Rail Conversion Guide',
+    slug: 'seaport-drayage-intermodal-conversion-guide',
+    subtitle: 'Strategic frameworks for transitioning seaport container imports directly to Class-1 rail ramps to bypass terminal chassis shortages.',
+    publishDate: 'May 19, 2026',
+    readTime: '11 min read',
+    author: {
+      name: 'Michael Sterling',
+      role: 'Head of Telematics & Logistics Tech',
+      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200',
+    },
+    category: 'Market Intelligence',
+    summary: 'A study on port container demurrage risk mitigation. Benchmarks direct ship-to-rail transfers at LA/Long Beach and NY/NJ seaports.',
+    downloadablePdf: '/docs/Vanguardia_Port_Drayage_Intermodal_Guide.pdf',
+    keyFindings: [
+      'Direct rail ramping eliminated container demurrage fees for 98.6% of international ocean shipments.',
+      'Intermodal 53-foot container conversions generated an average 22% linehaul cost savings on routes over 800 miles.',
+    ],
+    stats: [
+      { label: 'Demurrage Avoidance', value: '98.6%', change: 'Zero Penalty' },
+      { label: 'Linehaul Savings', value: '22%', change: 'vs Highway FTL' },
+      { label: 'Class-1 Rail Ramps', value: '42 Hubs', change: 'Direct Ramping' },
+    ],
+    contentMarkdown: `
+# Seaport Drayage & Intermodal Guide
+    `,
+  },
+  {
+    id: 'report-telematics-ai-safety-benchmark',
+    title: 'Telematics & AI Maintenance: Eliminating Unplanned Roadside Breakdowns',
+    slug: 'telematics-ai-maintenance-breakdown-prevention',
+    subtitle: 'How predictive sensor algorithms on Class-8 engines reduce roadside breakdown downtime by 74% across high-cube long-haul fleets.',
+    publishDate: 'April 05, 2026',
+    readTime: '13 min read',
+    author: {
+      name: 'Elena Rostova',
+      role: 'Director of Fleet Operations & Sustainability',
+      avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200',
+    },
+    category: 'Supply Chain Index',
+    summary: 'Operational results from 10 million telematics miles evaluating predictive oil analysis, automated tire pressure inflation, and brake stroke sensors.',
+    downloadablePdf: '/docs/Vanguardia_Telematics_AI_Safety_Study.pdf',
+    keyFindings: [
+      'Predictive oil pressure and coolant sensors prevented 142 catastrophic engine failures before roadside breakdowns occurred.',
+      'Automated tire pressure inflation systems maintained optimal 105 PSI pressure, extending tire life by 35,000 miles per tractor.',
+    ],
+    stats: [
+      { label: 'Breakdown Reduction', value: '-74%', change: 'vs Industry Avg' },
+      { label: 'Fleet Telematics Miles', value: '10M Mi', change: 'Real-Time Evaluated' },
+      { label: 'Tire Life Extension', value: '+35k Mi', change: 'Automated Inflation' },
+    ],
+    contentMarkdown: `
+# Telematics & AI Predictive Maintenance Study
     `,
   },
 ];

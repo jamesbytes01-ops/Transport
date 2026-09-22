@@ -51,16 +51,40 @@ export default function DedicatedQuotePage() {
 
   return (
     <div style={{ backgroundColor: 'var(--color-bg-main)', minHeight: '100vh', paddingBottom: '6rem' }}>
-      {/* Banner */}
-      <section style={{ backgroundColor: 'var(--color-primary-dark)', color: '#FFFFFF', padding: '5rem 0 4rem 0' }}>
-        <div className="container">
-          <span className="badge-tag-accent">ENTERPRISE RATE CALCULATOR</span>
-          <h1 style={{ fontFamily: 'var(--font-heading)', fontSize: '3rem', fontWeight: 800, marginTop: '0.75rem' }}>
+      {/* Bespoke Rate Calculator Header Banner */}
+      <section className="dark-hero" style={{ background: 'linear-gradient(135deg, #1E3A8A 0%, #0F172A 60%, #451A03 100%)', color: '#FFFFFF', padding: '4.5rem 0 3.75rem 0', borderBottom: '1px solid rgba(255, 255, 255, 0.12)', position: 'relative', overflow: 'hidden' }}>
+        <div style={{ position: 'absolute', top: 0, right: 0, width: '400px', height: '400px', background: 'radial-gradient(circle, rgba(217, 119, 6, 0.18) 0%, rgba(0,0,0,0) 70%)', pointerEvents: 'none' }} />
+        <div className="container" style={{ position: 'relative', zIndex: 1 }}>
+          <div className="breadcrumb-nav">
+            <Link href="/">Home</Link>
+            <span className="breadcrumb-separator">/</span>
+            <span style={{ color: '#E2E8F0', fontWeight: 500 }}>Enterprise Freight Rate Calculator</span>
+          </div>
+
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.75rem' }}>
+            <span className="badge-tag-accent">ENTERPRISE RATE CALCULATOR</span>
+            <span style={{ fontSize: '0.8125rem', color: '#94A3B8' }}>3-Step Instant Contract Confirmation</span>
+          </div>
+
+          <h1 style={{ fontFamily: 'var(--font-heading)', fontSize: '2.85rem', fontWeight: 700, color: '#FFFFFF', marginTop: '0.5rem', letterSpacing: '-0.02em', lineHeight: 1.15 }}>
             Request an Enterprise Freight Quote
           </h1>
-          <p style={{ fontSize: '1.2rem', color: '#CBD5E1', maxWidth: '760px', marginTop: '1rem', lineHeight: 1.6 }}>
+
+          <p style={{ fontSize: '1.15rem', color: '#CBD5E1', maxWidth: '820px', marginTop: '0.85rem', lineHeight: 1.6 }}>
             Lock in guaranteed Class-8 asset capacity and contract rate estimates across North American freight corridors.
           </p>
+
+          <div className="header-stat-ribbon">
+            <div className="header-stat-pill">
+              <Calculator size={14} color="#FBBF24" /> <span>Instant Mileage & Fuel Surcharge Calculation</span>
+            </div>
+            <div className="header-stat-pill">
+              <CheckCircle2 size={14} color="#34D399" /> <span>Official DMB-100 Carrier Tariff Rates</span>
+            </div>
+            <div className="header-stat-pill">
+              <ShieldCheck size={14} color="#38BDF8" /> <span>Guaranteed Dispatch Booking SLA</span>
+            </div>
+          </div>
         </div>
       </section>
 

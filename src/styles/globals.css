@@ -134,6 +134,59 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.02em;
 }
 
+/* Dark Container Heading Overrides - Prevents Dark Navy Text on Dark Navy Backgrounds */
+section[style*="backgroundColor: '#070C19'"] h1,
+section[style*="background-color: '#070C19'"] h1,
+section[style*="backgroundColor: '#0F172A'"] h1,
+section[style*="background-color: '#0F172A'"] h1,
+.dark-hero h1,
+.dark-hero h2,
+.dark-hero h3,
+.page-hero h1,
+.page-hero h2 {
+  color: #FFFFFF !important;
+}
+
+/* Breadcrumbs Utility */
+.breadcrumb-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+  color: #94A3B8;
+  margin-bottom: 1rem;
+}
+.breadcrumb-nav a {
+  color: #CBD5E1;
+  transition: color var(--transition-fast);
+}
+.breadcrumb-nav a:hover {
+  color: var(--color-accent);
+}
+.breadcrumb-separator {
+  color: #64748B;
+}
+
+/* Stat Ribbon Pills for Page Headers */
+.header-stat-ribbon {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+.header-stat-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.85rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-full);
+  font-size: 0.8125rem;
+  color: #E2E8F0;
+  font-weight: 500;
+}
+
 .text-gradient-subtle {
   background: linear-gradient(135deg, var(--color-text-inverse) 0%, #CBD5E1 100%);
   -webkit-background-clip: text;

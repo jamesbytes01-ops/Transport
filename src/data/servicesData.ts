@@ -1,5 +1,112 @@
 import { ServiceItem } from '@/types';
 
+export interface ServiceComparisonItem {
+  name: string;
+  category: string;
+  maxPayload: string;
+  leadTime: string;
+  telematicsFrequency: string;
+  tempRange: string;
+  slaScore: string;
+  bestFor: string;
+}
+
+export const SERVICE_COMPARISON_MATRIX: ServiceComparisonItem[] = [
+  {
+    name: 'Full Truckload (FTL) 53’ Dry Van',
+    category: 'Standard / High-Cube',
+    maxPayload: '45,500 Lbs',
+    leadTime: 'Same Day / 24 Hrs',
+    telematicsFrequency: 'Every 15 Mins',
+    tempRange: 'Ambient / N/A',
+    slaScore: '99.6%',
+    bestFor: 'High-Volume Retail & Automotive Line Feed',
+  },
+  {
+    name: 'Temperature-Controlled Cold Chain',
+    category: 'Refrigerated / Frozen',
+    maxPayload: '43,500 Lbs',
+    leadTime: '24 - 48 Hrs',
+    telematicsFrequency: 'Every 60 Secs (Satellite)',
+    tempRange: '-20°F to +70°F (±0.5°F)',
+    slaScore: '99.98% (Zero Excursion)',
+    bestFor: 'Biopharmaceuticals, Vaccines & Fresh Produce',
+  },
+  {
+    name: 'Heavy Haul & Over-Dimensional',
+    category: 'RGN Lowboy / Multi-Axle',
+    maxPayload: 'Up to 150,000 Lbs',
+    leadTime: '48 - 72 Hrs (Permits)',
+    telematicsFrequency: 'Every 5 Mins',
+    tempRange: 'Ambient / N/A',
+    slaScore: '100% Safety Guarantee',
+    bestFor: 'Transformers, Turbines & Construction Rigging',
+  },
+  {
+    name: 'Intermodal Rail Container',
+    category: '53’ Container & Chassis',
+    maxPayload: '42,500 Lbs',
+    leadTime: '48 Hrs Notice',
+    telematicsFrequency: 'Every 1 Hour',
+    tempRange: 'Ambient / Controlled',
+    slaScore: '98.2%',
+    bestFor: 'Long-Haul (>750 Mi) CO2 & Cost Reduction',
+  },
+  {
+    name: 'Contract Warehousing & Cross-Dock',
+    category: '3.2M Sq. Ft. Facilities',
+    maxPayload: 'N/A (36’ Clear High-Bay)',
+    leadTime: 'Immediate Pool Access',
+    telematicsFrequency: 'Real-Time WMS (EDI 856)',
+    tempRange: 'Climate-Controlled',
+    slaScore: '99.95% Pick Accuracy',
+    bestFor: 'Inventory Staging & Retail Pool Distribution',
+  },
+  {
+    name: 'Expedited Emergency Hot-Shot',
+    category: 'Dual-Driver Sleeper / Straight Truck',
+    maxPayload: '38,000 Lbs',
+    leadTime: '< 30 Mins Dispatch',
+    telematicsFrequency: 'Continuous Real-Time Satellite',
+    tempRange: 'Ambient / Temp Opt',
+    slaScore: '99.9%',
+    bestFor: 'Assembly Line Shutdown Prevention & Medical Emergency',
+  },
+];
+
+export const DISPATCH_WORKFLOW_STEPS = [
+  {
+    stepNum: '01',
+    title: 'Automated Rate & Asset Allocation',
+    desc: 'Shipper inputs origin/destination zips. Vanguardia TMS pings nearest terminal asset buffer and locks Class-8 power unit.',
+  },
+  {
+    stepNum: '02',
+    title: 'Pre-Cooling & Facility Sanitization',
+    desc: 'For cold chain assets, trailer Thermo King unit is remotely pre-cooled to target temp setpoint. Sanitization logs generated.',
+  },
+  {
+    stepNum: '03',
+    title: 'Driver Arrival & Geofence Check-In',
+    desc: 'Samsara satellite telematics automatically logs driver arrival at shipper dock, triggering real-time eBOL timestamping.',
+  },
+  {
+    stepNum: '04',
+    title: 'In-Transit Satellite Telemetry',
+    desc: 'Load pings location every 60s. Cold chain sensors record supply air, return air, and internal temp variance continuously.',
+  },
+  {
+    stepNum: '05',
+    title: 'Automated Receiver Gate Alert',
+    desc: 'Receiving dock management system pings when trailer is 30, 10, and 0 minutes away to eliminate dock dwell time.',
+  },
+  {
+    stepNum: '06',
+    title: 'eBOL Delivery & Audit Proofing',
+    desc: 'Instant digital Proof of Delivery (POD) and temperature excursion audit reports delivered to shipper dashboard.',
+  },
+];
+
 export const SERVICES_DATA: ServiceItem[] = [
   {
     id: 'ftl-dry-van',

@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation';
 import { COMPANY_INFO } from '@/data/companyData';
 import { 
   Truck, 
-  PhoneCall, 
+  Mail, 
   ShieldCheck, 
   Menu, 
   X, 
@@ -40,8 +40,8 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
         <div className={`container ${styles.topBarInner}`}>
           <div className={styles.topBarInfo}>
             <div className={styles.topBarItem}>
-              <PhoneCall size={14} />
-              <span>24/7 Central Dispatch Hotline: <strong>{COMPANY_INFO.phone.dispatch}</strong></span>
+              <Mail size={14} />
+              <span>24/7 Dispatch Desk: <strong>{COMPANY_INFO.email.quotes}</strong></span>
             </div>
             <div className={styles.topBarItem}>
               <ShieldCheck size={14} />
@@ -49,10 +49,10 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
             </div>
           </div>
           <div className={styles.topBarActions}>
-            <a href="tel:+18005558264" className={styles.topBarLink}>
+            <Link href="/contact" className={styles.topBarLink}>
               <UserCheck size={14} />
               <span>Client Portal</span>
-            </a>
+            </Link>
             <button onClick={onOpenQuoteModal} className={styles.topBarLink}>
               <FileText size={14} />
               <span>Quick Rate Estimator</span>
@@ -69,8 +69,8 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
               <Truck size={24} />
             </div>
             <div className={styles.logoText}>
-              <span className={styles.brandName}>VANGUARDIA</span>
-              <span className={styles.brandSub}>TRANSPORT GROUP</span>
+              <span className={styles.brandName}>GETDIGIFORT</span>
+              <span className={styles.brandSub}>DMB TRANSIT INC.</span>
             </div>
           </Link>
 
@@ -92,10 +92,10 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
 
           {/* Action CTAs */}
           <div className={styles.ctaGroup}>
-            <a href={`tel:${COMPANY_INFO.phone.dispatch}`} className="btn btn-outline">
-              <PhoneCall size={16} />
-              <span>Talk to Our Team</span>
-            </a>
+            <Link href="/contact" className="btn btn-outline">
+              <Mail size={16} />
+              <span>Contact Dispatch</span>
+            </Link>
             <button onClick={onOpenQuoteModal} className="btn btn-primary">
               <span>Request a Quote</span>
               <ChevronRight size={16} />
@@ -124,8 +124,8 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
               <Truck size={20} />
             </div>
             <div className={styles.logoText}>
-              <span className={styles.brandName} style={{ color: '#FFFFFF' }}>VANGUARDIA</span>
-              <span className={styles.brandSub}>TRANSPORT GROUP</span>
+              <span className={styles.brandName} style={{ color: '#FFFFFF' }}>GETDIGIFORT</span>
+              <span className={styles.brandSub}>DMB TRANSIT INC.</span>
             </div>
           </div>
           <button className={styles.closeBtn} onClick={() => setMobileMenuOpen(false)}>
@@ -157,14 +157,15 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
           >
             <span>Request a Quote</span>
           </button>
-          <a
-            href={`tel:${COMPANY_INFO.phone.dispatch}`}
+          <Link
+            href="/contact"
             className="btn btn-outline-white"
             style={{ width: '100%' }}
+            onClick={() => setMobileMenuOpen(false)}
           >
-            <PhoneCall size={16} />
-            <span>Call Dispatch</span>
-          </a>
+            <Mail size={16} />
+            <span>Contact Dispatch</span>
+          </Link>
         </div>
       </div>
     </header>

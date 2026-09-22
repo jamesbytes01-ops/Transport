@@ -1,0 +1,20 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="512" height="512" rx="112" fill="#0F172A"/>
+  <rect x="24" y="24" width="464" height="464" rx="88" stroke="url(#paint0_linear)" stroke-width="16" stroke-opacity="0.5"/>
+  <!-- Shield Fortress Base -->
+  <path d="M256 84L384 140V248C384 336 328 408 256 432C184 408 128 336 128 248V140L256 84Z" fill="url(#paint1_linear)" stroke="#38BDF8" stroke-width="6"/>
+  <!-- Dynamic Transport Chevron Arrows -->
+  <path d="M192 225L256 170L320 225" stroke="#FFFFFF" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M192 295L256 240L320 295" stroke="#D97706" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M176 345H336" stroke="#38BDF8" stroke-width="16" stroke-linecap="round"/>
+  <defs>
+    <linearGradient id="paint0_linear" x1="0" y1="0" x2="512" y2="512" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D97706"/>
+      <stop offset="1" stop-color="#1E3A8A"/>
+    </linearGradient>
+    <linearGradient id="paint1_linear" x1="256" y1="84" x2="256" y2="432" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1E3A8A"/>
+      <stop offset="1" stop-color="#070C19"/>
+    </linearGradient>
+  </defs>
+</svg>

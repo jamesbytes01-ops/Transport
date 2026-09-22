@@ -10,7 +10,6 @@ export function generateOrganizationSchema() {
     url: 'https://vanguardiafreight.com',
     logo: 'https://vanguardiafreight.com/images/brand-logo.png',
     description: COMPANY_INFO.shortDesc,
-    telephone: COMPANY_INFO.phone.office,
     email: COMPANY_INFO.email.quotes,
     address: {
       '@type': 'PostalAddress',

@@ -6,7 +6,6 @@ import { COMPANY_INFO } from '@/data/companyData';
 import { 
   Truck, 
   MapPin, 
-  PhoneCall, 
   Mail, 
   ShieldCheck, 
   ArrowRight, 
@@ -58,7 +57,7 @@ export const Footer: React.FC = () => {
                     display: 'block',
                   }}
                 >
-                  VANGUARDIA
+                  GETDIGIFORT
                 </span>
                 <span
                   style={{
@@ -69,7 +68,7 @@ export const Footer: React.FC = () => {
                     textTransform: 'uppercase',
                   }}
                 >
-                  TRANSPORT GROUP
+                  DMB TRANSIT INC.
                 </span>
               </div>
             </div>
@@ -121,7 +120,7 @@ export const Footer: React.FC = () => {
             <h4 className={styles.colTitle}>Company & Insights</h4>
             <ul className={styles.linkList}>
               <li>
-                <Link href="/about">About Vanguardia</Link>
+                <Link href="/about">About GetDigiFort</Link>
               </li>
               <li>
                 <Link href="/fleet">Fleet Specifications</Link>
@@ -155,11 +154,11 @@ export const Footer: React.FC = () => {
             </div>
 
             <div className={styles.contactItem}>
-              <PhoneCall size={18} />
+              <Mail size={18} />
               <div>
-                <strong>24/7 Central Dispatch:</strong><br />
-                <a href={`tel:${COMPANY_INFO.phone.dispatch}`} style={{ color: '#FFFFFF', fontWeight: 600 }}>
-                  {COMPANY_INFO.phone.dispatch}
+                <strong>24/7 Digital Dispatch:</strong><br />
+                <a href={`mailto:${COMPANY_INFO.email.support}`} style={{ color: '#FFFFFF', fontWeight: 600 }}>
+                  {COMPANY_INFO.email.support}
                 </a>
               </div>
             </div>
@@ -167,7 +166,7 @@ export const Footer: React.FC = () => {
             <div className={styles.contactItem}>
               <Mail size={18} />
               <div>
-                <strong>Freight Enquiries:</strong><br />
+                <strong>Freight Rate Quotes:</strong><br />
                 <a href={`mailto:${COMPANY_INFO.email.quotes}`} style={{ color: '#FFFFFF' }}>
                   {COMPANY_INFO.email.quotes}
                 </a>
@@ -204,16 +203,22 @@ export const Footer: React.FC = () => {
           </div>
         </div>
 
+        {/* Operational Carrier Disclaimer */}
+        <div style={{ backgroundColor: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.08)', borderRadius: 'var(--radius-md)', padding: '1rem 1.25rem', marginBottom: '1.5rem', fontSize: '0.8125rem', color: '#94A3B8', lineHeight: 1.5 }}>
+          <strong style={{ color: '#E2E8F0', display: 'block', marginBottom: '0.25rem' }}>Operational Carrier Disclaimer:</strong>
+          GetDigiFort is owned and operated by DMB Transit Inc. (USDOT #3849120, MC-892104). All freight quotations, equipment availability, and transit SLAs are subject to formal contract confirmation, carrier tariff rules (DMB-100), and standard bill of lading terms. Rates and transit estimates generated online are subject to final dispatch verification.
+        </div>
+
         {/* Bottom Legal & Compliance Bar */}
         <div className={styles.bottomBar}>
           <div>
-            © {new Date().getFullYear()} {COMPANY_INFO.legalName}. All Rights Reserved. Asset-Based Surface Carrier.
+            © 2026 GetDigiFort. Owned and Operated by DMB Transit Inc.. All Rights Reserved.
           </div>
           <div className={styles.bottomLinks}>
-            <Link href="/about#compliance">Safety & DOT Compliance</Link>
-            <Link href="/contact#terms">Terms of Carriage</Link>
-            <Link href="/contact#privacy">Privacy Policy</Link>
-            <Link href="/contact#claims">Claims & Insurance</Link>
+            <Link href="/privacy">Privacy Policy</Link>
+            <Link href="/terms">Terms of Carriage</Link>
+            <Link href="/compliance">Safety & DOT Compliance</Link>
+            <Link href="/claims">Claims & Insurance</Link>
           </div>
         </div>
       </div>

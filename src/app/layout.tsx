@@ -23,6 +23,11 @@ export const metadata: Metadata = {
     template: `%s | ${COMPANY_INFO.name}`,
   },
   description: COMPANY_INFO.shortDesc,
+  icons: {
+    icon: '/icon.svg',
+    shortcut: '/favicon.svg',
+    apple: '/icon.svg',
+  },
   keywords: [
     'Freight Logistics',
     'Full Truckload Transport',

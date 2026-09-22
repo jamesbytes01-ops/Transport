@@ -47,24 +47,33 @@ export default function BlogArticlePage({ params }: BlogDetailProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* Banner */}
-      <section style={{ backgroundColor: 'var(--color-primary-dark)', color: '#FFFFFF', padding: '5rem 0 4rem 0' }}>
-        <div className="container" style={{ maxWidth: '840px' }}>
-          <Link href="/blog" style={{ color: 'var(--color-accent)', fontSize: '0.875rem', fontWeight: 600, display: 'inline-flex', alignItems: 'center', gap: '0.3rem', marginBottom: '1rem' }}>
-            ← Back to Logistics Blog
-          </Link>
-          <span className="badge-tag-accent" style={{ display: 'block', width: 'fit-content' }}>
-            {article.category}
-          </span>
-          <h1 style={{ fontFamily: 'var(--font-heading)', fontSize: '2.75rem', fontWeight: 800, marginTop: '0.75rem', lineHeight: 1.2 }}>
+      {/* Bespoke Article Header Banner */}
+      <section className="dark-hero" style={{ background: 'linear-gradient(135deg, #1E1B4B 0%, #0F172A 60%, #090D16 100%)', color: '#FFFFFF', padding: '4.5rem 0 3.75rem 0', borderBottom: '1px solid rgba(255, 255, 255, 0.12)', position: 'relative', overflow: 'hidden' }}>
+        <div style={{ position: 'absolute', top: 0, right: 0, width: '400px', height: '400px', background: 'radial-gradient(circle, rgba(99, 102, 241, 0.18) 0%, rgba(0,0,0,0) 70%)', pointerEvents: 'none' }} />
+        <div className="container" style={{ maxWidth: '880px', position: 'relative', zIndex: 1 }}>
+          <div className="breadcrumb-nav">
+            <Link href="/">Home</Link>
+            <span className="breadcrumb-separator">/</span>
+            <Link href="/blog">Blog</Link>
+            <span className="breadcrumb-separator">/</span>
+            <span style={{ color: '#E2E8F0', fontWeight: 500 }}>{article.category}</span>
+          </div>
+
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.75rem' }}>
+            <span className="badge-tag-accent">{article.category}</span>
+            <span style={{ fontSize: '0.8125rem', color: '#94A3B8' }}>{article.publishDate}</span>
+          </div>
+
+          <h1 style={{ fontFamily: 'var(--font-heading)', fontSize: '2.65rem', fontWeight: 700, color: '#FFFFFF', marginTop: '0.5rem', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
             {article.title}
           </h1>
 
-          <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem', marginTop: '1.5rem', paddingTop: '1.25rem', borderTop: '1px solid rgba(255, 255, 255, 0.1)' }}>
-            <img src={article.author.avatar} alt={article.author.name} style={{ width: '48px', height: '48px', borderRadius: 'var(--radius-full)', objectFit: 'cover' }} />
-            <div>
-              <strong style={{ fontSize: '0.95rem', color: '#FFFFFF', display: 'block' }}>{article.author.name}</strong>
-              <span style={{ fontSize: '0.8125rem', color: '#94A3B8' }}>{article.author.role} • Published {article.publishDate} ({article.readTime})</span>
+          <div className="header-stat-ribbon">
+            <div className="header-stat-pill">
+              <User size={14} color="#38BDF8" /> <span>{article.author.name} ({article.author.role})</span>
+            </div>
+            <div className="header-stat-pill">
+              <Clock size={14} color="#FBBF24" /> <span>{article.readTime} Read</span>
             </div>
           </div>
         </div>
@@ -74,12 +83,12 @@ export default function BlogArticlePage({ params }: BlogDetailProps) {
       <article className="container" style={{ maxWidth: '840px', marginTop: '3rem' }}>
         <div
           style={{
-            height: '420px',
+            height: '400px',
             borderRadius: 'var(--radius-lg)',
             backgroundImage: `url(${article.imageUrl})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
-            marginBottom: '3rem',
+            marginBottom: '2.5rem',
             border: '1px solid var(--color-border)',
             boxShadow: 'var(--shadow-md)',
           }}

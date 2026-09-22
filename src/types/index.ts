@@ -98,8 +98,8 @@ export interface TerminalLocation {
   state: string;
   region: 'Northeast' | 'Midwest' | 'Southeast' | 'Southwest' | 'West Coast';
   address: string;
-  phone: string;
-  dispatchHotline: string;
+  terminalCode: string;
+  dispatchEmail: string;
   dockDoors: number;
   squareFeet: number;
   certifications: string[];
