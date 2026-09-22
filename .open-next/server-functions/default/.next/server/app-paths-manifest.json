@@ -1,0 +1,19 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/about/page": "app/about/page.js",
+  "/fleet/page": "app/fleet/page.js",
+  "/blog/page": "app/blog/page.js",
+  "/icon.svg/route": "app/icon.svg/route.js",
+  "/page": "app/page.js",
+  "/quote/page": "app/quote/page.js",
+  "/research/page": "app/research/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/claims/page": "app/claims/page.js",
+  "/privacy/page": "app/privacy/page.js",
+  "/industries/page": "app/industries/page.js",
+  "/terms/page": "app/terms/page.js",
+  "/services/[slug]/page": "app/services/[slug]/page.js",
+  "/compliance/page": "app/compliance/page.js",
+  "/services/page": "app/services/page.js",
+  "/blog/[slug]/page": "app/blog/[slug]/page.js"
+}
