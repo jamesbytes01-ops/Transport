@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter, Plus_Jakarta_Sans } from 'next/font/google';
 import '@/styles/globals.css';
+import Script from 'next/script';
 import { ClientLayout } from '@/components/layout/ClientLayout';
 import { generateOrganizationSchema } from '@/lib/seo';
 import { COMPANY_INFO } from '@/data/companyData';
@@ -24,9 +25,9 @@ export const metadata: Metadata = {
   },
   description: COMPANY_INFO.shortDesc,
   icons: {
-    icon: '/icon.svg',
+    icon: '/favicon.svg',
     shortcut: '/favicon.svg',
-    apple: '/icon.svg',
+    apple: '/favicon.svg',
   },
   keywords: [
     'Freight Logistics',
@@ -60,6 +61,19 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${jakarta.variable}`}>
       <head>
+        {/* Google tag (gtag.js) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18471207184"
+          strategy="afterInteractive"
+        />
+        <Script id="google-gtag" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-18471207184');
+          `}
+        </Script>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
