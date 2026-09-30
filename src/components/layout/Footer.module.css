@@ -1,8 +1,8 @@
 .footer {
   background-color: var(--color-primary-dark);
   color: #94A3B8;
-  padding-top: 3rem;
-  padding-bottom: 1.5rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   font-size: 0.875rem;
 }
@@ -10,8 +10,8 @@
 .footerGrid {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1.5fr;
-  gap: 2.5rem;
-  margin-bottom: 2rem;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .brandCol {
