@@ -1,4 +1,4 @@
-globalThis.openNextDebug = false;globalThis.openNextVersion = "4.1.4";globalThis.nextVersion = "14.2.15";
+globalThis.openNextDebug = false;globalThis.openNextVersion = "4.1.6";globalThis.nextVersion = "14.2.15";
 
 // ../../AppData/Local/npm-cache/_npx/72a7346bab235e2f/node_modules/@opennextjs/cloudflare/dist/api/durable-objects/bucket-cache-purge.js
 import { DurableObject } from "cloudflare:workers";

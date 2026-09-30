@@ -1,4 +1,4 @@
-globalThis.disableIncrementalCache = false;globalThis.disableDynamoDBCache = false;globalThis.openNextDebug = false;globalThis.openNextVersion = "4.1.4";globalThis.nextVersion = "14.2.15";
+globalThis.disableIncrementalCache = false;globalThis.disableDynamoDBCache = false;globalThis.openNextDebug = false;globalThis.openNextVersion = "4.1.6";globalThis.nextVersion = "14.2.15";
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
@@ -427,7 +427,15 @@ var Cache = class {
     if (globalThis.openNextConfig.dangerous?.disableIncrementalCache) {
       return;
     }
-    const detachedPromise = globalThis.__openNextAls.getStore()?.pendingPromiseRunner.withResolvers();
+    const store = globalThis.__openNextAls.getStore();
+    const writePromise = this.writeCache(key, data, ctx);
+    if (data?.kind === "FETCH" || store === void 0) {
+      await writePromise;
+      return;
+    }
+    store.pendingPromiseRunner.add(writePromise);
+  }
+  async writeCache(key, data, ctx) {
     try {
       if (data === null || data === void 0) {
         await globalThis.incrementalCache.delete(key);
@@ -513,8 +521,6 @@ var Cache = class {
       debug("Finished setting cache");
     } catch (e) {
       error("Failed to set cache", e);
-    } finally {
-      detachedPromise?.resolve();
     }
   }
   async revalidateTag(tags, durations) {

@@ -1,4 +1,4 @@
-globalThis.openNextDebug = false;globalThis.openNextVersion = "4.1.4";globalThis.nextVersion = "14.2.15";
+globalThis.openNextDebug = false;globalThis.openNextVersion = "4.1.6";globalThis.nextVersion = "14.2.15";
 
 // ../../AppData/Local/npm-cache/_npx/72a7346bab235e2f/node_modules/@opennextjs/aws/dist/utils/error.js
 var IgnorableError = class extends Error {
@@ -156,7 +156,7 @@ var DOQueueHandler = class extends DurableObject {
         method: "HEAD",
         headers: {
           // This is defined during build
-          "x-prerender-revalidate": "bb7775d2cbbf892321b4aedd870001ac",
+          "x-prerender-revalidate": "27ab9b97b0810570abae2d5cfff6f210",
           "x-isr": "1"
         },
         // This one is kind of problematic, it will always show the wall time of the revalidation to `this.revalidationTimeout`
@@ -180,7 +180,7 @@ var DOQueueHandler = class extends DurableObject {
           "INSERT OR REPLACE INTO sync (id, lastSuccess, buildId) VALUES (?, unixepoch(), ?)",
           // We cannot use the deduplication id because it's not unique per route - every time a route is revalidated, the deduplication id is different.
           `${host}${url}`,
-          "Af6yqXgPjyKiyEdyvjXim"
+          "QjOk4xaUQnrd1rVDF0T5k"
         );
       }
       this.routeInFailedState.delete(msg.MessageDeduplicationId);
@@ -232,7 +232,7 @@ var DOQueueHandler = class extends DurableObject {
     }
     this.routeInFailedState.set(msg.MessageDeduplicationId, updatedFailedState);
     if (!this.disableSQLite) {
-      this.sql.exec("INSERT OR REPLACE INTO failed_state (id, data, buildId) VALUES (?, ?, ?)", msg.MessageDeduplicationId, JSON.stringify(updatedFailedState), "Af6yqXgPjyKiyEdyvjXim");
+      this.sql.exec("INSERT OR REPLACE INTO failed_state (id, data, buildId) VALUES (?, ?, ?)", msg.MessageDeduplicationId, JSON.stringify(updatedFailedState), "QjOk4xaUQnrd1rVDF0T5k");
     }
     await this.addAlarm();
   }
@@ -256,8 +256,8 @@ var DOQueueHandler = class extends DurableObject {
       return;
     this.sql.exec("CREATE TABLE IF NOT EXISTS failed_state (id TEXT PRIMARY KEY, data TEXT, buildId TEXT)");
     this.sql.exec("CREATE TABLE IF NOT EXISTS sync (id TEXT PRIMARY KEY, lastSuccess INTEGER, buildId TEXT)");
-    this.sql.exec("DELETE FROM failed_state WHERE buildId != ?", "Af6yqXgPjyKiyEdyvjXim");
-    this.sql.exec("DELETE FROM sync WHERE buildId != ?", "Af6yqXgPjyKiyEdyvjXim");
+    this.sql.exec("DELETE FROM failed_state WHERE buildId != ?", "QjOk4xaUQnrd1rVDF0T5k");
+    this.sql.exec("DELETE FROM sync WHERE buildId != ?", "QjOk4xaUQnrd1rVDF0T5k");
     const failedStateCursor = this.sql.exec("SELECT * FROM failed_state");
     for (const row of failedStateCursor) {
       this.routeInFailedState.set(row.id, JSON.parse(row.data));
