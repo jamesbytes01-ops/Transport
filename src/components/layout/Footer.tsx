@@ -205,13 +205,13 @@ export const Footer: React.FC = () => {
 
         {/* Operational Carrier Disclaimer */}
         <div style={{ backgroundColor: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.08)', borderRadius: 'var(--radius-md)', padding: '0.85rem 1.25rem', marginBottom: '1.5rem', fontSize: '0.85rem', color: '#CBD5E1', textAlign: 'center' }}>
-          © 2026 GetDigiFort. Owned and Operated by DMB Transit Inc..
+          © 2026 GetDigiFort. Owned and Operated by DMB Transit Inc.. All Rights Reserved.
         </div>
 
         {/* Bottom Legal & Compliance Bar */}
         <div className={styles.bottomBar}>
           <div>
-            © 2026 GetDigiFort. Owned and Operated by DMB Transit Inc..
+            © 2026 GetDigiFort. Owned and Operated by DMB Transit Inc.. All Rights Reserved.
           </div>
           <div className={styles.bottomLinks}>
             <Link href="/privacy">Privacy Policy</Link>
